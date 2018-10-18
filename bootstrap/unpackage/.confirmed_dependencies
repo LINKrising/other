@@ -1,0 +1,13 @@
+{
+	"index.html": {
+		"resources": [
+			"img/logo4.png",
+			"img/003.jpg",
+			"js/jquery-3.1.1.min.js",
+			"img/201706271106525951d1e4145a1.jpg",
+			"js/bootstrap.min.js",
+			"img/kecheng.jpg",
+			"css/bootstrap.min.css"
+		]
+	}
+}

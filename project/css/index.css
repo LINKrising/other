@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 14px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+/*        .wrapper{
+            background: url(img/banner@3x.jpg)
+        }*/
+#head-wrapper {
+  width: 100%;
+  height: 60px;
+  background: #000;
+}
+#head-wrapper .head {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+#head-wrapper .head .navbar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#head-wrapper .head .navbar li {
+  width: 15%;
+  font-size: 14px;
+  line-height: 60px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+}
+
+#head-wrapper .head .navbar li:hover {
+  background: #6688ab;
+  /*            border-radius: 10%;*/
+  transition: all 0.7s;
+}
+#head-wrapper .head .navbar li.active {
+  background: red;
+}
+#head-wrapper .head .navbar li:nth-child(1) {
+  background: red;
+}
+#head-wrapper .head .navbar li span {
+  float: right;
+}
+#banner {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  /*            background:green;*/
+  position: relative;
+}
+#banner .carousel {
+  position: absolute;
+  width: 9000px;
+  height: 600px;
+  z-index: -1;
+  /*            background: red;*/
+}
+#banner .carousel .banner-photo {
+  width: 2100px;
+  height: 600px;
+  float: left;
+  z-index: -1;
+}
+#banner .carousel .banner-photo>img {
+  display: block;
+  width: 2100px;
+  height: 600px;
+}
+#banner .carousel div:nth-child(1) {
+  background: red;
+  opacity: 0.5;
+}
+#banner .carousel div:nth-child(2) {
+  background: blue;
+}
+#banner .carousel div:nth-child(3) {
+  background: black;
+}
+#banner ol {
+  position: absolute;
+  left: 48%;
+  bottom: 20px;
+}
+#banner ol li {
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+  display: inline-block;
+  cursor: pointer;
+}
+#banner ol li.on {
+  color: red;
+}
+#banner .hello {
+  display: block;
+  height: 10%;
+  width: 70%;
+  font-size: 36px;
+  margin: 0 auto;
+  padding-top: 5%;
+  text-align: center;
+  color: #fff;
+}
+#banner .username {
+  display: block;
+  height: 10%;
+  width: 70%;
+  font-size: 46px;
+  margin: 0 auto;
+  padding-top: 1%;
+  text-align: center;
+  text-shadow: 2px 2px 2px blue;
+}
+#banner .job {
+  /*            display:block;*/
+  height: 10%;
+  width: 70%;
+  font-size: 21px;
+  margin: 0 auto;
+  padding-top: 3%;
+  text-align: center;
+  color: #fff;
+}
+
+#banner button {
+  display: block;
+  width: 200px;
+  height: 10%;
+  background: red;
+  margin: 4% auto;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black 33%,
+    red 33%,
+    red 66%,
+    green 66%,
+    green 100%
+  );
+  border-radius: 16px;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  -webkit-outline: none;
+}
+#banner button:hover {
+  transform: scale(1.2);
+  transition: all 0.7s;
+}
+#intrwrapper {
+  width: 100%;
+  height: 500px;
+  background: #fff;
+}
+#intr-section {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  overflow: hidden;
+  /*            flex-direction:row;
+            flex-wrap:wrap;
+*/
+}
+#intr-section div:nth-child(1) {
+  height: 100%;
+  width: 35%;
+  text-align: center;
+}
+#intr-section div:nth-child(2) {
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+}
+#intr-section div:nth-child(3) {
+  height: 100%;
+  width: 35%;
+}
+#intr-section .intr-right .study {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.intr-left h2 {
+  margin-top: 10%;
+  letter-spacing: 8px;
+}
+.intr-left h4 {
+  margin-top: 5%;
+  letter-spacing: 2px;
+  color: #c363ec;
+}
+.intr-left p {
+  width: 100%;
+  margin-top: 14%;
+  text-align: center;
+}
+.infcontainer {
+  width: 100%;
+  height: 300px;
+  background: #dcdcde;
+}
+.infcontainer .inf-items {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.infcontainer .inf-items .phonenum {
+  width: 33.3%;
+  height: 100%;
+  padding-top: 15%;
+  display: inline-block;
+  text-align: center;
+}
+.infcontainer .inf-items .phonenum .back {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-left: 38%;
+  background: url(http://127.0.1/project/img/phone.png) no-repeat 50% 50%
+    #374362;
+}
+#blog-wrapper,
+#content-wrapper {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+#blog-wrapper .blog,
+#content-wrapper .blog {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  /*            background: red;*/
+  text-align: center;
+  font-size: 35px;
+}
+#blog-wrapper .blog .group,
+#content-wrapper .blog .group {
+  display: inline-block;
+}
+#blog-wrapper .blog .group-wrapper,
+#content-wrapper .blog .group-wrapper {
+  padding-top: 10%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#blog-wrapper .blog .group,
+#content-wrapper .blog .group {
+  width: 33.3%;
+}
+#blog-wrapper .blog .group img,
+#content-wrapper .blog .group img {
+  width: 250px;
+  height: 250px;
+}
+#footer-wrapper {
+  width: 100%;
+  height: 200px;
+  background: #333;
+}
+#list-art {
+  width: 70%;
+  height: auto;
+  margin: 20px auto;
+}
+#list-art h3,
+p {
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  #banner {
+    height: 400px;
+  }
+  /* #intrwrapper #intr-section{
+                height: 200px;
+             }
+             #intrwrapper #intr-section .intr-left h2{
+                font-size: 9px;
+             }
+             #intrwrapper #intr-section .intr-left h4{
+                font-size: 7px;
+             }
+             #intrwrapper #intr-section .intr p{
+                font-size: 5px;
+             } */
+  #blog-wrapper {
+    height: 2100px;
+  }
+  #blog-wrapper .blog .group {
+    width: 100%;
+  }
+}

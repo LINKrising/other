@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/index.css" >
+        <style>
+
+			*{
+				margin: 0;
+				padding: 0;
+
+			}
+			html{
+				font-family: "微软雅黑","黑体";
+			}
+			body{
+				background: #F0F0F0;
+			}
+
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			#warp{
+				height: 678px;
+				background: #ff5046;
+				width: 100%;
+			}
+			#header{
+				width: 960px;
+				height: 678px;
+				margin: 0 auto;
+
+            }
+            .header_top{
+            	height: 80px;
+            	width: 960px;
+            	
+            	
+            }
+            #header .logo img{
+            	margin-top: 20px;
+            	width: 95px;
+            	height: 36px;
+            	float: left;
+            }
+
+            .nav ul li{
+            	float: left;
+
+
+            }
+            .nav ul li:hover{
+            	opacity: 0.8;
+            }
+            .nav ul li:hover a{
+            	border-top: 2px solid #fff;
+            	line-height: 78px;
+            	display: inline-block;
+              
+            }
+
+            .nav ul li a{
+            	font-size: 16px;
+            	color:#fff;
+            	line-height: 80px;
+            	margin-left: 54px;
+            	padding: 0 7px;
+
+            }
+            .ktvimg{
+            	margin:30px auto;
+            	width: 339px;
+            	height: 49px;
+            }
+            .download{
+            	margin:0 auto;
+            	width: 168px;
+            	height: 48px;
+            	background: url(images/download.png) no-repeat;
+            }
+            .download a{
+            	color: #fff;
+            	font-size: 24px;
+            	line-height: 48px;
+            	margin-left: 55px;
+
+            }
+            .phoneimg{
+            	width: 960px;
+            	height: 413px;
+            	
+            	margin-top: 28px;
+            	position:relative;
+            	overflow: hidden;
+
+            }
+            .phoneimg img{
+            	position: absolute;
+            	left: 0;
+            	top:0;
+            }
+            .phoneimg img:nth-child(1).on{
+			    left: -1px;
+			    top: 106px;
+			    transition: .5s .5s;
+            	
+            }
+                .phoneimg img:nth-child(1){
+			    left: -1000px;
+			    top: 102px;
+            	
+            }
+            .phoneimg img:nth-child(2).on{
+				left: 155px;
+				top: 76px;
+				transition: .5s 1s;
+            	           	
+            }
+            .phoneimg img:nth-child(2){
+				left: -1000px;
+				top: 76px;
+				
+            	           	
+            }             
+            .phoneimg img:nth-child(3){
+            	left: 312px;
+            	top:0;
+            	animation:zoom .5s linear;
+            	
+            }
+            .phoneimg img:nth-child(4).on{
+            	left: 507px;
+            	top:0;
+            	transition: .5s 1s;
+            }
+            .phoneimg img:nth-child(4){
+            	left: 999px;
+            	top:0;
+            }            
+            .phoneimg img:nth-child(5).on{
+			    left: 662px;
+			    top: 16px;
+			    transition: .5s .5s;
+            }
+            .phoneimg img:nth-child(5){
+			    left: 1000px;
+			    top: -19px;
+            }            
+            @keyframes zoom{
+                    0% {transform: scale(0.5);}
+                    20%{transform: scale(1);}
+                    40%{transform: scale(0.6);}
+                    60%{transform: scale(1.2);}
+                    80%{transform: scale(0.8);}
+                    100%{transform: scale(1);}
+
+            }
+            #section{
+
+            	width: 960px;
+            	height: 460px;
+            	margin:0 auto;
+            	padding-top: 60px;
+
+            }
+            #section img{
+            	width: 232px;
+            	height: 412px;
+            	float:left;
+            	margin-right: 8px;
+            }
+            #section .img_p li{
+                width: 232px;
+            	height: 22px;
+            	float:left;
+            	margin-right: 8px;
+            	text-align: center;	
+            	color: #444;
+            	margin-top: 20px;
+
+            }
+            #content{
+            	width: 960px;
+            	height: 200px;
+            	margin:0 auto;
+            	background:url(images/home_icons.png) no-repeat;
+            	margin-top: 60px;
+            	
+
+            }
+            #content span{
+            	width: 18%;
+            	display:inline-block;
+            	text-align: center;
+            	padding-top: 110px;
+            	padding-left: 6px;
+            	color: #fff;
+            }  
+            #content span:hover{
+            	transform: scale(1.4);
+            	transition: all 1s;
+            }  
+            #footer{
+
+            	width: 960px;
+            	height: 80px;
+            	margin: 0 auto;
+            	text-align: center;
+            	margin-top: 50px;
+            	font-size: 14px;
+            	
+            }
+        </style>
+    </head>
+    <body>
+    <div id="warp">
+	    <div id="header">
+	      <div class="header_top">
+	    	<div class="logo">
+	    		<img src="images/logo.png" alt="logo" width="95" height="36">
+	    	</div>
+	    	<div class="nav">
+	    		<ul>
+	    			<li><a href="javascript=;" >首页</a></li>
+	    			<li><a href="javascript=;">精彩表演</a></li>
+	    			<li><a href="javascript=;">会员中心</a></li>
+	    			<li><a href="javascript=;">金币充值</a></li>
+	    			<li><a href="javascript=;">分享伴奏</a></li>
+	    			<li><a href="javascript=;">直播</a></li>
+	    			<li><a href="javascript=;">音乐人</a></li>
+	    		</ul>
+	    	</div>
+	      </div>
+	    	<div class="ktvimg">
+	    		<img src="images/ktv.png" alt="ktv">
+	    	</div>
+	    	<div class="download">
+	    		<a href="javascript=;">免费下载</a>
+	    	</div>
+
+	    	<div class="phoneimg">
+	    		<img src="images/top1.png" alt="1">
+	    		<img src="images/top2.png" alt="2">
+	    		<img src="images/top3.png" alt="3">
+	    		<img src="images/top4.png" alt="4">
+	    		<img src="images/top5.png" alt="5">
+	    	</div>
+	    </div>
+	 </div>
+	    <div id="section">
+	    	<img src="images/display1.jpg" alt="1">
+
+	    	<img src="images/display2.jpg" alt="2">
+	    	<img src="images/display3.jpg" alt="3">
+	    	<img src="images/display4.jpg" alt="4">
+	    	<ul class="img_p">
+	    		<li>最时尚的手机KTV</li>
+	    		<li>上百万高品质伴奏</li>
+	    		<li>人气最高的K歌社区</li>
+	    		<li>附近的兴趣群组</li>
+	    	</ul>
+	    	
+
+	    </div>
+	    <div id="content">
+	    	<span> phone</span>
+	    	<span>Android</span>
+	    	<span>iPad</span>
+	    	<span>winphone</span>
+	    	<span>二维码</span>
+	    </div>
+	    <div id="footer">
+				<p>沃唱吧| English| 重新设置密码| 帮助中心| 联系我们| 加入唱吧| 防诈骗专栏| 商品防伪查询 </p>
+				<p>北京酷智科技有限公司 ©2017 changba.com | 京ICP证110298 | 办公电话：010-84299866</p>
+				<p>京网文[2015]0390-170号 | 营业性演出许可证 |  京公网安备11010502025063号 | </p> 
+
+	    </div>
+    </body>
+     <script>
+     	var ophoneimg = document.getElementsByClassName("phoneimg")[0];
+     	var oimg = ophoneimg.getElementsByTagName("img");
+     	var onav = document.getElementsByClassName("nav")[0];
+     	var ia = onav.getElementsByTagName("a");
+     	
+     	window.onload = function(){
+     		for(var i=0;i<oimg.length;i++){
+     			oimg[i].className="on";
+     			
+     		};
+     	};
+     	
+     	ia.hover = function(){
+     		for(var i=0;i<ia.length;i++){
+     			ia[i].className="first_a_block";
+     		}
+     		
+     	}
+     	
+     	
+     </script>
+</html>

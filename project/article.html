@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>blog</title>
+    <!-- 使用chrome和最新版ie渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="blog" />
+    <meta name="description" content="blog" />
+    <meta name="author" content="link" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <script src="js/vue.js"></script>
+    <script type="text/javascript" src="js/move.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <div id="head-wrapper">
+        <div class="head">
+            <ul class="navbar">
+                <li v-for="nav in navs">
+                    <a href="index.html">{{nav.navbars}}</a>
+                    <span>-</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- header -->
+    <!-- section -->
+    <div id="blog-wrapper">
+        <div class="blog">
+            <h2>BLOG</h2>
+            <div class="group-wrapper">
+                <div class="group" v-for="item in items">
+                    <img :src="item.imgsrc" alt="">
+                    <h6>{{item.title}}</h6>
+                    <p style="font-size: 12px;display:inline-block;width: 60%;">{{item.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section -->
+    <!-- footer -->
+    <div id="footer-wrapper">
+        <div class="footer">
+            <p style="color:white;font-size: 16px;text-align: center;line-height: 200px;">vue--------------------------</p>
+        </div>
+    </div>
+    <!-- footer -->
+    <script type="text/javascript">
+        //请求菜单数据
+        window.onload = function () {
+            var meun = [];
+            var content = [];
+            (function () {
+                var xmlhttp;
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {
+
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                };
+
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        var meunData = xmlhttp.responseText;
+                        var meunD = JSON.parse(meunData);
+                        //console.log(meunD)
+                        //解析JSON,遍历加入菜单数组
+                        for (key in meunD) {
+                            //console.log(meunD[key]);
+                            content.push(meunD[key]);
+                        }
+                    }
+                }
+                xmlhttp.open("GET", "http://127.0.0.1/project/selectdata.php", true);
+                xmlhttp.send();
+                console.log(content);
+            })();
+
+            (function () {
+                var xmlhttp;
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {
+
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                };
+
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        var meunData = xmlhttp.responseText;
+                        var meunD = JSON.parse(meunData);
+                        //console.log(meunD)
+                        //解析JSON,遍历加入菜单数组
+                        for (key in meunD) {
+                            //console.log(meunD[key]);
+                            meun.push(meunD[key]);
+                        }
+                    }
+                }
+                var timeb = Date();
+                xmlhttp.open("GET", `http://127.0.0.1/project/jsondata/meun.json?tim=${timeb}`, true);
+                xmlhttp.send();
+                console.log(meun);
+            })();
+
+            //请求菜单数据
+            //vue数据渲染
+            let navbar = new Vue({
+                el: ".navbar",
+                data: {
+                    navs:meun
+                }
+            });
+            let contento = new Vue({
+                el: ".blog",
+                data: {
+                    items: content
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

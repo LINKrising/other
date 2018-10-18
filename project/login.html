@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>login</title>
+</head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	#form-wapper{
+  		width: 350px;
+  		height: 365px;
+  		background: white;
+  		margin: 120px auto;
+  		border-radius: 10px;
+  	}
+  	#form-wapper form{
+  		margin-top:80px; 
+  	}
+  </style>
+<body style="background: #5a88c6;">
+	<div id="form-wapper">
+	<h2 class="text-center">后台管理系统</h2>
+<form class="form-horizontal" role="form" action="login.php" method="POST">
+  <div class="form-group">
+    <label for="myusername" class="col-sm-2 control-label">账号</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  placeholder="请输入账号" name="myusername" id="myusername">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="mypassword" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control"  placeholder="请输入密码" name="mypassword" id="mypassword">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox">请记住我
+        </label>
+      </div>
+    </div>
+  </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" class="btn btn-default" id="subBtn" value="登录">
+          </div>
+    </div>
+
+
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -281,24 +281,15 @@
 	    </div>
     </body>
      <script>
-     	var ophoneimg = document.getElementsByClassName("phoneimg")[0];
-     	var oimg = ophoneimg.getElementsByTagName("img");
-     	var onav = document.getElementsByClassName("nav")[0];
-     	var ia = onav.getElementsByTagName("a");
      	
      	window.onload = function(){
+		const oimg = ophoneimg.getElementsByTagName("img");
      		for(var i=0;i<oimg.length;i++){
      			oimg[i].className="on";
      			
      		};
      	};
      	
-     	ia.hover = function(){
-     		for(var i=0;i<ia.length;i++){
-     			ia[i].className="first_a_block";
-     		}
-     		
-     	}
      	
      	
      </script>
